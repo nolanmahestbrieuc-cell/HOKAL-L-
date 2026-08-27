@@ -13,162 +13,23 @@
 </head>
 <body>
 
-<!-- ============ SVG SPRITE (shoe + icons) ============ -->
+<!-- ============ ICON SPRITE ============ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- ===== Master running shoe (profile, toe to the right) ===== -->
-    <symbol id="shoe" viewBox="0 0 640 380">
-      <!-- soft ground shadow -->
-      <ellipse cx="330" cy="342" rx="250" ry="20" fill="rgba(16,24,40,0.10)"/>
-
-      <!-- outsole (bottom rubber) -->
-      <path d="M78 300
-               C60 300 46 288 46 274
-               C46 262 58 256 78 256
-               L470 250
-               C544 248 596 256 612 274
-               C620 283 616 296 600 300
-               C560 306 120 306 78 300 Z"
-            fill="var(--shoe-out,#141a24)"/>
-      <!-- outsole lugs -->
-      <g fill="rgba(255,255,255,0.16)">
-        <rect x="96"  y="292" width="26" height="10" rx="3"/>
-        <rect x="150" y="294" width="26" height="10" rx="3"/>
-        <rect x="204" y="295" width="26" height="10" rx="3"/>
-        <rect x="258" y="295" width="26" height="10" rx="3"/>
-        <rect x="312" y="294" width="26" height="10" rx="3"/>
-        <rect x="366" y="292" width="26" height="10" rx="3"/>
-        <rect x="420" y="289" width="26" height="10" rx="3"/>
-        <rect x="474" y="285" width="26" height="10" rx="3"/>
-        <rect x="528" y="280" width="24" height="10" rx="3"/>
-      </g>
-
-      <!-- midsole (thick sculpted foam) -->
-      <path d="M84 262
-               C56 262 40 244 44 224
-               C48 206 66 200 92 202
-               L470 210
-               C548 212 604 226 620 246
-               C628 256 624 268 606 270
-               C556 276 470 262 470 262
-               L120 268
-               C104 268 92 266 84 262 Z"
-            fill="var(--shoe-mid,#ffffff)"/>
-      <!-- midsole sculpt grooves -->
-      <g stroke="rgba(16,24,40,0.10)" stroke-width="2" fill="none" stroke-linecap="round">
-        <path d="M70 232 C220 246 420 244 610 250"/>
-        <path d="M64 248 C210 262 420 258 606 262"/>
-      </g>
-      <!-- midsole orange energy wedge -->
-      <path d="M44 224 C48 206 66 200 92 202 L190 204
-               C150 214 96 226 74 244 C58 246 44 238 44 224 Z"
-            fill="var(--shoe-accent,#ff5a20)" opacity="0.92"/>
-      <path d="M470 210 C548 212 604 226 620 246 C628 256 624 268 606 270
-               C560 258 512 236 470 224 Z"
-            fill="var(--shoe-accent,#ff5a20)" opacity="0.9"/>
-
-      <!-- upper (knit) -->
-      <path d="M96 206
-               C88 176 96 138 120 128
-               C146 118 176 122 196 140
-               C206 149 214 160 236 168
-               C300 190 388 196 452 202
-               C468 204 476 214 470 222
-               C300 232 150 226 100 214
-               C97 212 96 209 96 206 Z"
-            fill="var(--shoe-body,#eef3f8)"/>
-      <!-- toe cap -->
-      <path d="M356 196 C392 198 432 201 452 202 C468 204 476 214 470 222
-               C430 224 386 222 350 218 C340 208 344 200 356 196 Z"
-            fill="var(--shoe-body2,#e2eaf2)"/>
-      <!-- heel counter -->
-      <path d="M100 206 C92 178 98 144 118 130 C120 150 118 176 122 208
-               C114 210 106 209 100 206 Z"
-            fill="var(--shoe-body2,#e2eaf2)"/>
-      <!-- collar / ankle opening -->
-      <path d="M120 128 C146 118 176 122 196 140 C186 150 168 154 150 152
-               C138 150 128 142 120 128 Z"
-            fill="var(--shoe-out,#141a24)" opacity="0.9"/>
-      <!-- tongue -->
-      <path d="M196 140 C210 150 224 158 236 164 C226 150 220 138 214 128
-               C206 128 200 132 196 140 Z"
-            fill="var(--shoe-body2,#e2eaf2)"/>
-      <!-- laces -->
-      <g stroke="rgba(16,24,40,0.55)" stroke-width="6" stroke-linecap="round">
-        <path d="M214 150 L250 170"/>
-        <path d="M232 146 L272 166"/>
-        <path d="M252 146 L292 164"/>
-        <path d="M274 148 L312 164"/>
-      </g>
-      <!-- eyelets -->
-      <g fill="rgba(16,24,40,0.5)">
-        <circle cx="252" cy="171" r="3.5"/><circle cx="272" cy="167" r="3.5"/>
-        <circle cx="292" cy="165" r="3.5"/><circle cx="312" cy="165" r="3.5"/>
-      </g>
-      <!-- HokaLélé side "flight" mark -->
-      <path d="M300 176 C330 168 366 168 402 178 C372 182 340 184 306 190
-               C298 188 296 180 300 176 Z"
-            fill="var(--shoe-accent,#ff5a20)"/>
-      <!-- heel pull tab -->
-      <path d="M112 132 C104 122 104 110 114 106 C124 104 132 112 130 124
-               C124 128 118 130 112 132 Z"
-            fill="var(--shoe-accent,#ff5a20)"/>
-    </symbol>
-
-    <!-- ===== Runner silhouette (mid-stride) ===== -->
-    <symbol id="runner" viewBox="0 0 300 360">
-      <path d="M170 40 a20 20 0 1 0 0.1 0 Z" />
-      <path d="M168 60
-               C182 66 190 80 188 98
-               C186 116 176 128 190 146
-               C204 164 226 172 236 190
-               C244 204 230 216 218 206
-               C204 194 188 182 176 172
-               C170 190 160 208 168 228
-               C176 248 190 268 182 292
-               C176 312 158 318 150 300
-               C144 286 152 268 150 250
-               C148 232 138 220 128 236
-               C116 254 108 280 92 296
-               C78 310 60 302 66 284
-               C72 266 92 252 102 232
-               C112 212 118 190 116 168
-               C114 146 104 130 112 110
-               C118 92 134 78 150 74
-               C156 66 160 60 168 60 Z"/>
-    </symbol>
-
-    <!-- ===== usage / tech line icons ===== -->
-    <symbol id="ic-cushion" viewBox="0 0 48 48">
-      <path d="M8 30c0-8 7-14 16-14s16 6 16 14" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-      <path d="M6 34h36" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-      <path d="M14 24c3-2 17-2 20 0M12 30c4-2.5 20-2.5 24 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
-    </symbol>
-    <symbol id="ic-light" viewBox="0 0 48 48">
-      <path d="M10 26h22M14 34h14M18 18h18" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-      <path d="M30 12l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="ic-stable" viewBox="0 0 48 48">
-      <path d="M24 6l16 9v10c0 10-7 15-16 17-9-2-16-7-16-17V15z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
-      <path d="M17 24l5 5 9-10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="ic-running" viewBox="0 0 48 48">
-      <circle cx="30" cy="10" r="4.5" fill="currentColor"/>
-      <path d="M27 18c4 1 6 5 5 9l7 4M32 27l-3 8 4 8M22 22l-8 3 3 8M27 18l-9 4" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="ic-trail" viewBox="0 0 48 48">
-      <path d="M6 38l10-16 7 9 6-13 13 20z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
-      <circle cx="34" cy="12" r="3.5" fill="currentColor"/>
-    </symbol>
-    <symbol id="ic-training" viewBox="0 0 48 48">
-      <path d="M8 24h6M34 24h6M14 16v16M34 16v16M14 24h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="ic-lifestyle" viewBox="0 0 48 48">
-      <path d="M24 40s-14-8-14-19a8 8 0 0114-5 8 8 0 0114 5c0 11-14 19-14 19z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="ic-arrow" viewBox="0 0 24 24">
-      <path d="M5 12h13M12 6l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 6l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M4 5h2l1.6 10.2a1.6 1.6 0 0 0 1.6 1.4h7.5a1.6 1.6 0 0 0 1.6-1.3L20 8H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="ic-plus" viewBox="0 0 24 24"><path d="M12 6v12M6 12h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <!-- amorti : couches empilées -->
+    <symbol id="ic-cushion" viewBox="0 0 40 40"><path d="M20 8l13 5-13 5-13-5 13-5Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7 19l13 5 13-5M7 25l13 5 13-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- légèreté : plume -->
+    <symbol id="ic-feather" viewBox="0 0 40 40"><path d="M29 11a8 8 0 0 0-11 0l-8 8v8h8l8-8a8 8 0 0 0 3-8Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M25 15L11 29M24 20h-6M20 24h-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <!-- stabilité : structure -->
+    <symbol id="ic-stability" viewBox="0 0 40 40"><path d="M20 7l11 19H9L20 7Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="20" cy="7" r="2.4" fill="currentColor"/><circle cx="9" cy="26" r="2.4" fill="currentColor"/><circle cx="31" cy="26" r="2.4" fill="currentColor"/><path d="M20 12v9m0 0l-6 5m6-5l6 5" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".55"/></symbol>
+    <!-- réseaux -->
+    <symbol id="ic-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="ic-strava" viewBox="0 0 24 24"><path d="M10 3 4 15h4l2-4 2 4h4L10 3Z" fill="currentColor"/><path d="M14 15l-2 4-2-4H8l4 6 4-6h-2Z" fill="currentColor" opacity=".55"/></symbol>
+    <symbol id="ic-yt" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10.5 9.2l4.5 2.8-4.5 2.8V9.2Z" fill="currentColor"/></symbol>
+    <symbol id="ic-tiktok" viewBox="0 0 24 24"><path d="M14 4c.5 2.8 2.4 4.4 5 4.6v3c-1.9 0-3.6-.6-5-1.6V16a5.4 5.4 0 1 1-5.4-5.4c.4 0 .8 0 1.2.1v3.1a2.4 2.4 0 1 0 1.7 2.3V4H14Z" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
@@ -178,261 +39,180 @@
     <a href="#top" class="logo" aria-label="HokaLélé accueil">Hoka<span>Lélé</span></a>
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="#modeles">Chaussures</a>
-      <a href="#collection">Collection</a>
+      <a href="#modeles">Collection</a>
       <a href="#techno">Technologie</a>
       <a href="#histoire">Notre histoire</a>
     </nav>
     <div class="nav__actions">
-      <a href="#collection" class="btn btn--solid btn--sm">Découvrir la collection</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#modeles" class="btn btn--solid btn--sm">Découvrir la collection</a>
+      <a href="#" class="icon-btn" aria-label="Panier"><svg aria-hidden="true"><use href="#ic-cart"/></svg></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
   <nav class="nav__mobile" id="navMobile" aria-label="Navigation mobile">
     <a href="#modeles">Chaussures</a>
-    <a href="#collection">Collection</a>
+    <a href="#modeles">Collection</a>
     <a href="#techno">Technologie</a>
     <a href="#histoire">Notre histoire</a>
-    <a href="#collection" class="btn btn--solid">Découvrir la collection</a>
+    <a href="#modeles" class="btn btn--solid">Découvrir la collection</a>
   </nav>
 </header>
 
 <main>
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <!-- dynamic background graphics -->
-    <div class="hero__bg" aria-hidden="true">
-      <div class="blob blob--sky"></div>
-      <div class="blob blob--orange"></div>
-      <svg class="hero__curves" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-        <path d="M-100 620 C300 520 620 700 900 540 C1140 400 1300 500 1560 360"
-              fill="none" stroke="rgba(255,90,32,0.35)" stroke-width="2.5" stroke-dasharray="2 12" stroke-linecap="round"/>
-        <path d="M-100 720 C360 640 700 780 1040 620 C1260 520 1400 590 1560 470"
-              fill="none" stroke="rgba(30,110,180,0.18)" stroke-width="2"/>
-      </svg>
+    <div class="hero__photo" aria-hidden="true">
+      <img src="images/hero-runner.jpg" alt="" width="1500" height="1500" fetchpriority="high" />
+      <span class="hero__fade"></span>
     </div>
+
+    <!-- ligne de trajectoire orange -->
+    <svg class="hero__trace" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-40 720 C280 690 430 700 560 660 C720 612 760 470 1000 430 C1180 400 1300 470 1500 360"
+            fill="none" stroke="#ff5d1f" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
 
     <div class="wrap hero__inner">
       <div class="hero__copy">
-        <span class="eyebrow reveal">Nouvelle génération — Course &amp; Trail</span>
-        <h1 class="reveal">Repoussez vos limites.<br/><span class="accent">Changez votre foulée.</span></h1>
+        <span class="eyebrow reveal">Faites plus. Allez plus loin.</span>
+        <h1 class="reveal">Repoussez vos limites.<br /><span class="accent">Changez votre foulée.</span></h1>
         <p class="hero__sub reveal">Des chaussures pensées pour transformer chaque pas en élan.</p>
         <div class="hero__cta reveal">
-          <a href="#collection" class="btn btn--solid btn--lg">Découvrir la collection</a>
-          <a href="#techno" class="btn btn--ghost btn--lg">Explorer la technologie
-            <svg class="btn__ic" aria-hidden="true"><use href="#ic-arrow"/></svg>
-          </a>
-        </div>
-        <div class="hero__stats reveal">
-          <div><strong>-32%</strong><span>d'impact au sol</span></div>
-          <div><strong>218g</strong><span>de légèreté</span></div>
-          <div><strong>4.9<em>/5</em></strong><span>par les coureurs</span></div>
-        </div>
-      </div>
-
-      <div class="hero__visual reveal">
-        <div class="hero__stage">
-          <svg class="hero__runner" viewBox="0 0 300 360" aria-hidden="true">
-            <use href="#runner" fill="rgba(18,24,34,0.9)"/>
-          </svg>
-          <svg class="hero__shoe" viewBox="0 0 640 380" role="img" aria-label="Chaussure de running HokaLélé en mouvement"
-               style="--shoe-body:#ffffff;--shoe-body2:#eaf1f8;--shoe-mid:#f4f8fc;--shoe-out:#151b26;--shoe-accent:#ff5a20;">
-            <use href="#shoe"/>
-          </svg>
-          <span class="trace trace--1" aria-hidden="true"></span>
-          <span class="trace trace--2" aria-hidden="true"></span>
-          <span class="trace trace--3" aria-hidden="true"></span>
+          <a href="#modeles" class="btn btn--solid btn--lg">Découvrir la collection <svg class="btn__ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+          <a href="#techno" class="link-arrow">Explorer la technologie <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
         </div>
       </div>
     </div>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Amorti maximal</span><i>•</i><span>Légèreté dynamique</span><i>•</i><span>Stabilité naturelle</span><i>•</i>
-        <span>Propulsion</span><i>•</i><span>Liberté de mouvement</span><i>•</i>
-        <span>Amorti maximal</span><i>•</i><span>Légèreté dynamique</span><i>•</i><span>Stabilité naturelle</span><i>•</i>
-        <span>Propulsion</span><i>•</i><span>Liberté de mouvement</span><i>•</i>
-      </div>
+    <!-- encart chiffres -->
+    <div class="hero__badge" aria-hidden="true">
+      <span class="hero__badge-tick"></span>
+      <ul>
+        <li>Plus de légèreté</li>
+        <li>Plus d'amorti</li>
+        <li>Plus d'énergie</li>
+      </ul>
+      <span class="hero__badge-plus"><svg aria-hidden="true"><use href="#ic-plus"/></svg></span>
     </div>
   </section>
 
-  <!-- ================= TECHNOLOGIES ================= -->
-  <section class="section techno" id="techno">
-    <div class="wrap">
-      <header class="section__head reveal">
-        <span class="eyebrow eyebrow--dark">La technologie HokaLélé</span>
-        <h2>Conçues pour l'élan,<br/>pensées pour durer.</h2>
-        <p class="section__lead">Trois innovations qui travaillent ensemble à chaque foulée pour vous porter plus loin.</p>
-      </header>
-
-      <div class="grid grid--3">
-        <article class="card reveal">
-          <span class="card__ic"><svg aria-hidden="true"><use href="#ic-cushion"/></svg></span>
-          <h3>Amorti maximal</h3>
-          <p>Une mousse sculptée à haute restitution qui absorbe les impacts et protège vos articulations, kilomètre après kilomètre.</p>
-          <span class="card__index">01</span>
+  <!-- ================= BANDE TECHNO ================= -->
+  <section class="techbar" id="techno">
+    <div class="wrap techbar__inner">
+      <h2 class="techbar__title reveal">Conçues pour<br />aller plus loin</h2>
+      <div class="techbar__items">
+        <article class="techbar__item reveal">
+          <span class="techbar__ic"><svg aria-hidden="true"><use href="#ic-cushion"/></svg></span>
+          <div><h3>Amorti maximal</h3><p>Confort supérieur et absorption des impacts.</p></div>
         </article>
-        <article class="card reveal">
-          <span class="card__ic"><svg aria-hidden="true"><use href="#ic-light"/></svg></span>
-          <h3>Légèreté dynamique</h3>
-          <p>Une structure allégée et une géométrie « rocker » qui créent une sensation de propulsion naturelle à chaque appui.</p>
-          <span class="card__index">02</span>
+        <article class="techbar__item reveal">
+          <span class="techbar__ic"><svg aria-hidden="true"><use href="#ic-feather"/></svg></span>
+          <div><h3>Légèreté dynamique</h3><p>Une sensation de propulsion à chaque foulée.</p></div>
         </article>
-        <article class="card reveal">
-          <span class="card__ic"><svg aria-hidden="true"><use href="#ic-stable"/></svg></span>
-          <h3>Stabilité naturelle</h3>
-          <p>Un maintien enveloppant et une base élargie pour avancer avec confiance et équilibre, sur tous les terrains.</p>
-          <span class="card__index">03</span>
+        <article class="techbar__item reveal">
+          <span class="techbar__ic"><svg aria-hidden="true"><use href="#ic-stability"/></svg></span>
+          <div><h3>Stabilité naturelle</h3><p>Maintien et confiance sur tous les terrains.</p></div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ================= MODÈLES PHARES ================= -->
-  <section class="section models" id="modeles">
+  <section class="models" id="modeles">
     <div class="wrap">
-      <header class="section__head section__head--row reveal">
-        <div>
-          <span class="eyebrow eyebrow--dark">Les modèles phares</span>
-          <h2>Une silhouette pour chaque foulée.</h2>
-        </div>
-        <a href="#collection" class="link-arrow">Voir toute la collection
-          <svg aria-hidden="true"><use href="#ic-arrow"/></svg>
-        </a>
+      <header class="section-head reveal">
+        <h2>Les modèles phares</h2>
+        <p>Conçues pour aller plus loin.</p>
       </header>
-
-      <div class="grid grid--3">
+      <div class="products">
         <article class="product reveal">
-          <div class="product__media product__media--a">
-            <svg class="product__shoe" viewBox="0 0 640 380" role="img" aria-label="Modèle Élan Cloud"
-                 style="--shoe-body:#ffffff;--shoe-body2:#eef3f8;--shoe-mid:#ffffff;--shoe-out:#1a2230;--shoe-accent:#ff5a20;">
-              <use href="#shoe"/>
-            </svg>
-            <span class="product__tag">Route</span>
-          </div>
+          <a class="product__media" href="#modeles"><img src="images/product-mach.jpg" alt="Chaussure de running HokaLélé Mach 6" width="1000" height="1000" loading="lazy" /></a>
           <div class="product__body">
-            <div class="product__row">
-              <h3>Élan Cloud</h3>
-              <span class="product__price">169 €</span>
-            </div>
-            <p>L'amorti nuage pour vos sorties longues. Douceur maximale, retour d'énergie constant.</p>
-            <a href="#collection" class="btn btn--outline btn--full">Découvrir</a>
+            <h3>Mach 6</h3>
+            <p>Légèreté et dynamisme pour vos entraînements quotidiens.</p>
+            <a href="#modeles" class="link-arrow link-arrow--dark">Découvrir <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
           </div>
         </article>
-
         <article class="product reveal">
-          <div class="product__media product__media--b">
-            <svg class="product__shoe" viewBox="0 0 640 380" role="img" aria-label="Modèle Foulée Trail"
-                 style="--shoe-body:#132133;--shoe-body2:#0d1826;--shoe-mid:#22344a;--shoe-out:#0a1220;--shoe-accent:#ff6a2c;">
-              <use href="#shoe"/>
-            </svg>
-            <span class="product__tag">Trail</span>
-          </div>
+          <a class="product__media" href="#modeles"><img src="images/product-bondi.jpg" alt="Chaussure de running HokaLélé Bondi 9" width="1000" height="1000" loading="lazy" /></a>
           <div class="product__body">
-            <div class="product__row">
-              <h3>Foulée Trail</h3>
-              <span class="product__price">189 €</span>
-            </div>
-            <p>Accroche mordante et stabilité renforcée pour dévorer les sentiers les plus techniques.</p>
-            <a href="#collection" class="btn btn--outline btn--full">Découvrir</a>
+            <h3>Bondi 9</h3>
+            <p>Amorti maximal et confort ultime pour avaler les kilomètres.</p>
+            <a href="#modeles" class="link-arrow link-arrow--dark">Découvrir <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
           </div>
         </article>
-
         <article class="product reveal">
-          <div class="product__media product__media--c">
-            <svg class="product__shoe" viewBox="0 0 640 380" role="img" aria-label="Modèle Vélocité Race"
-                 style="--shoe-body:#ffffff;--shoe-body2:#ffe9df;--shoe-mid:#fff3ee;--shoe-out:#1a2230;--shoe-accent:#ff5a20;">
-              <use href="#shoe"/>
-            </svg>
-            <span class="product__tag">Compétition</span>
-          </div>
+          <a class="product__media" href="#modeles"><img src="images/product-speedgoat.jpg" alt="Chaussure de trail HokaLélé Speedgoat 6" width="1000" height="1000" loading="lazy" /></a>
           <div class="product__body">
-            <div class="product__row">
-              <h3>Vélocité Race</h3>
-              <span class="product__price">219 €</span>
-            </div>
-            <p>Ultra-légère et nerveuse. Pensée pour la vitesse pure et vos records personnels.</p>
-            <a href="#collection" class="btn btn--outline btn--full">Découvrir</a>
+            <h3>Speedgoat 6</h3>
+            <p>Accroche, protection et stabilité pour dompter tous les sentiers.</p>
+            <a href="#modeles" class="link-arrow link-arrow--dark">Découvrir <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= ÉDITORIAL ================= -->
+  <!-- ================= ÉDITORIAL LIFESTYLE ================= -->
   <section class="editorial" id="collection">
-    <div class="wrap editorial__inner">
-      <div class="editorial__media reveal" aria-hidden="true">
-        <div class="editorial__scene">
-          <div class="blob blob--sky editorial__blob"></div>
-          <svg class="editorial__runner" viewBox="0 0 300 360">
-            <use href="#runner" fill="#ffffff"/>
-          </svg>
-          <svg class="editorial__runner editorial__runner--ghost" viewBox="0 0 300 360">
-            <use href="#runner" fill="rgba(255,255,255,0.18)"/>
-          </svg>
-          <span class="editorial__dot d1"></span>
-          <span class="editorial__dot d2"></span>
-          <span class="editorial__dot d3"></span>
-        </div>
-      </div>
-      <div class="editorial__copy reveal">
-        <span class="eyebrow">Manifeste</span>
-        <h2>Minimal dans la forme.<br/><span class="accent">Maximum dans le mouvement.</span></h2>
-        <p>Nous croyons qu'une chaussure ne devrait jamais se faire sentir — seulement se faire oublier. Chaque ligne, chaque gramme, chaque courbe est dessiné pour disparaître sous vos pieds et ne laisser que la sensation pure de courir.</p>
-        <a href="#modeles" class="btn btn--solid">Découvrir la collection</a>
-      </div>
+    <img class="editorial__bg" src="images/lifestyle-run.jpg" alt="" width="2000" height="1100" loading="lazy" />
+    <div class="editorial__overlay"></div>
+    <div class="wrap editorial__inner reveal">
+      <h2>Minimal dans la forme.<br />Maximum dans le mouvement.</h2>
+      <span class="editorial__rule"></span>
     </div>
   </section>
 
-  <!-- ================= USAGES ================= -->
-  <section class="section usages" id="histoire">
+  <!-- ================= CATÉGORIES ================= -->
+  <section class="usages" id="histoire">
     <div class="wrap">
-      <header class="section__head reveal">
-        <span class="eyebrow eyebrow--dark">Notre histoire</span>
-        <h2>Pensées pour bouger.</h2>
-        <p class="section__lead">Nées d'une obsession pour le mouvement libre, les HokaLélé accompagnent chaque discipline, du bitume au sommet.</p>
+      <header class="section-head reveal">
+        <h2>Pensées pour bouger</h2>
+        <p>Conçues pour tous vos terrains de jeu.</p>
       </header>
-
-      <div class="grid grid--4">
-        <article class="usage reveal">
-          <span class="usage__ic"><svg aria-hidden="true"><use href="#ic-running"/></svg></span>
-          <h3>Running</h3>
-          <p>Le confort et le retour d'énergie pour vos kilomètres quotidiens.</p>
-        </article>
-        <article class="usage reveal">
-          <span class="usage__ic"><svg aria-hidden="true"><use href="#ic-trail"/></svg></span>
-          <h3>Trail</h3>
-          <p>Accroche et protection pour tous les terrains sauvages.</p>
-        </article>
-        <article class="usage reveal">
-          <span class="usage__ic"><svg aria-hidden="true"><use href="#ic-training"/></svg></span>
-          <h3>Training</h3>
-          <p>Stabilité et dynamisme pour repousser vos séances.</p>
-        </article>
-        <article class="usage reveal">
-          <span class="usage__ic"><svg aria-hidden="true"><use href="#ic-lifestyle"/></svg></span>
-          <h3>Lifestyle</h3>
-          <p>La signature HokaLélé, du réveil au coucher, sans compromis.</p>
-        </article>
+      <div class="cats">
+        <a class="cat reveal" href="#modeles">
+          <img src="images/cat-running.jpg" alt="Running" width="850" height="1100" loading="lazy" />
+          <span class="cat__overlay"></span>
+          <span class="cat__label">Running</span>
+        </a>
+        <a class="cat reveal" href="#modeles">
+          <img src="images/cat-trail.jpg" alt="Trail" width="850" height="1100" loading="lazy" />
+          <span class="cat__overlay"></span>
+          <span class="cat__label">Trail</span>
+        </a>
+        <a class="cat reveal" href="#modeles">
+          <img src="images/cat-training.jpg" alt="Training" width="850" height="1100" loading="lazy" />
+          <span class="cat__overlay"></span>
+          <span class="cat__label">Training</span>
+        </a>
+        <a class="cat reveal" href="#modeles">
+          <img src="images/cat-lifestyle.jpg" alt="Lifestyle" width="850" height="1100" loading="lazy" />
+          <span class="cat__overlay"></span>
+          <span class="cat__label">Lifestyle</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ================= NEWSLETTER ================= -->
   <section class="cta-band">
-    <div class="wrap cta-band__inner reveal">
-      <div class="cta-band__glow" aria-hidden="true"></div>
-      <span class="eyebrow">Rejoignez le mouvement</span>
-      <h2>Entrez dans le mouvement.</h2>
-      <p>Recevez nos sorties, avant-premières et conseils de course. Zéro bruit, que de l'élan.</p>
-      <form class="newsletter" id="newsletter" novalidate>
-        <label class="sr-only" for="email">Adresse e-mail</label>
-        <input type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
-        <button type="submit" class="btn btn--solid">Rejoindre HokaLélé</button>
-      </form>
-      <p class="newsletter__note" id="formNote" role="status" aria-live="polite">Pas de spam. Désinscription en un clic.</p>
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <svg class="cta-card__trace" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-20 210 C260 150 420 250 640 190 C860 130 980 220 1240 150" fill="none" stroke="#ff5d1f" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <div class="cta-card__text">
+          <h2>Entrez dans le mouvement.</h2>
+          <p>Conseils, nouveautés, offres exclusives : rejoignez la communauté HokaLélé.</p>
+        </div>
+        <form class="newsletter" id="newsletter" novalidate>
+          <label class="sr-only" for="email">Votre adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" autocomplete="email" required />
+          <button type="submit" class="btn btn--solid">Rejoindre HokaLélé <svg class="btn__ic" aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+        </form>
+      </div>
+      <p class="newsletter__note" id="formNote" role="status" aria-live="polite">Pas de spam. Désinscription à tout moment.</p>
     </div>
   </section>
 </main>
@@ -444,41 +224,31 @@
       <a href="#top" class="logo logo--light">Hoka<span>Lélé</span></a>
       <p>Des chaussures pensées pour transformer chaque pas en élan.</p>
       <div class="footer__social" aria-label="Réseaux sociaux">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        </a>
-        <a href="#" aria-label="Strava">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3 4 15h4l2-4 2 4h4L10 3Z" fill="currentColor"/><path d="M14 15l-2 4-2-4H8l4 6 4-6h-2Z" fill="currentColor" opacity=".6"/></svg>
-        </a>
-        <a href="#" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9l5 3-5 3V9Z" fill="currentColor"/></svg>
-        </a>
-        <a href="#" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4c.6 3 2.5 4.5 5 4.7v3c-2 0-3.6-.6-5-1.6V16a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v3.1a2.5 2.5 0 1 0 1.8 2.4V4H14Z" fill="currentColor"/></svg>
-        </a>
+        <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
+        <a href="#" aria-label="Strava"><svg aria-hidden="true"><use href="#ic-strava"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="#ic-yt"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg aria-hidden="true"><use href="#ic-tiktok"/></svg></a>
       </div>
     </div>
-
     <nav class="footer__col" aria-label="Produits">
-      <h4>Chaussures</h4>
-      <a href="#modeles">Route</a>
-      <a href="#modeles">Trail</a>
-      <a href="#modeles">Compétition</a>
-      <a href="#modeles">Lifestyle</a>
-    </nav>
-    <nav class="footer__col" aria-label="Marque">
-      <h4>HokaLélé</h4>
-      <a href="#histoire">Notre histoire</a>
+      <h4>Produits</h4>
+      <a href="#modeles">Chaussures</a>
+      <a href="#modeles">Collection</a>
       <a href="#techno">Technologie</a>
-      <a href="#collection">Collection</a>
-      <a href="#">Boutiques</a>
+    </nav>
+    <nav class="footer__col" aria-label="À propos">
+      <h4>À propos</h4>
+      <a href="#histoire">Notre histoire</a>
+      <a href="#">Durabilité</a>
+      <a href="#">Carrières</a>
+      <a href="#">Presse</a>
     </nav>
     <nav class="footer__col" aria-label="Aide">
       <h4>Aide</h4>
+      <a href="#">FAQ</a>
       <a href="#">Livraison &amp; retours</a>
       <a href="#">Guide des tailles</a>
-      <a href="#">Contact</a>
-      <a href="#">FAQ</a>
+      <a href="#">Nous contacter</a>
     </nav>
   </div>
   <div class="wrap footer__bottom">

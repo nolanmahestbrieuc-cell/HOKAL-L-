@@ -1,68 +1,81 @@
 # HokaLélé — Landing page
 
-Landing page premium et contemporaine pour **HokaLélé**, une marque fictive de
-chaussures de sport inspirée de l'esprit performance du running, du trail et du
-lifestyle sportif.
-
-Design épuré, lumineux et énergique : beaucoup d'espace blanc, une palette
-blanc cassé / bleu ciel doux relevée d'orange vif, une typographie sans
-empattement à forte hiérarchie et une sensation de mouvement omniprésente.
+Landing page premium et responsive pour **HokaLélé**, une marque (fictive) de
+chaussures de sport inspirée de l'univers du running, du trail et du lifestyle
+sportif. Cette version reproduit fidèlement la maquette de référence :
+en-tête fin, hero éditorial en deux colonnes avec grande photographie sportive,
+bande technologie, grille produits, bloc éditorial pleine largeur, catégories,
+newsletter et footer complet.
 
 ## Aperçu
 
-Ouvrez simplement `index.html` dans un navigateur — aucune dépendance à
-installer, aucun serveur requis.
+Ouvrez `index.html` dans un navigateur — aucune dépendance à installer.
 
 ```bash
-# option 1 : ouvrir directement
-open index.html            # macOS
-xdg-open index.html        # Linux
+# ouvrir directement
+xdg-open index.html      # Linux
+open index.html          # macOS
 
-# option 2 : petit serveur local
-python3 -m http.server 8000
-# puis http://localhost:8000
+# ou via un petit serveur local (recommandé pour charger les images)
+python3 -m http.server 8000   # puis http://localhost:8000
 ```
 
 ## Sections
 
-1. **Navigation** — logo texte « HokaLélé », liens (Chaussures, Collection,
-   Technologie, Notre histoire) et CTA orange « Découvrir la collection ».
-2. **Hero** — slogan « Repoussez vos limites. Changez votre foulée. »,
-   sous-titre, double CTA, statistiques et composition aérée avec chaussure
-   en mouvement, silhouette de coureur et lignes de trajectoire.
-3. **Technologie** — trois cartes : Amorti maximal, Légèreté dynamique,
-   Stabilité naturelle.
-4. **Les modèles phares** — grille de trois produits (Élan Cloud, Foulée
-   Trail, Vélocité Race).
+1. **En-tête** — logo « HokaLélé » (Hoka marine / Lélé orange), navigation
+   (Chaussures, Collection, Technologie, Notre histoire), bouton orange
+   « Découvrir la collection » et icône panier.
+2. **Hero** — « Repoussez vos limites. / Changez votre foulée. », sous-titre,
+   double CTA, grande photographie sportive plein cadre, ligne de trajectoire
+   orange et encart « Plus de légèreté / d'amorti / d'énergie ».
+3. **Bande technologie** — Amorti maximal, Légèreté dynamique, Stabilité
+   naturelle, avec pictogrammes fins et séparateurs.
+4. **Les modèles phares** — Mach 6, Bondi 9, Speedgoat 6 (photos produit).
 5. **Éditorial** — « Minimal dans la forme. Maximum dans le mouvement. »
-6. **Pensées pour bouger** — usages Running, Trail, Training, Lifestyle.
+6. **Pensées pour bouger** — Running, Trail, Training, Lifestyle.
 7. **Newsletter** — « Entrez dans le mouvement. » + champ e-mail et bouton
    orange « Rejoindre HokaLélé ».
-8. **Footer** — logo, navigation, réseaux sociaux et mentions légales.
+8. **Footer** — logo, colonnes (Produits, À propos, Aide), réseaux sociaux et
+   mentions légales.
 
 ## Détails techniques
 
 - **HTML / CSS / JavaScript natif**, sans framework ni build.
-- **Illustrations vectorielles (SVG)** dessinées à la main pour les chaussures,
-  le coureur et les icônes : la page est 100 % autonome et se charge
-  instantanément, sans image externe.
 - **Typographie** : [Archivo](https://fonts.google.com/specimen/Archivo)
-  (titres et logo) et [Inter](https://fonts.google.com/specimen/Inter) (texte),
-  chargées via Google Fonts.
+  (titres et logo) + [Inter](https://fonts.google.com/specimen/Inter) (texte),
+  via Google Fonts.
+- **Palette** : bleu ciel très clair, blanc, bleu marine profond, orange vif.
 - **Responsive** (mobile, tablette, desktop) et respect de
   `prefers-reduced-motion`.
 - Interactions légères : menu mobile, apparition au scroll, validation du
-  formulaire.
+  formulaire newsletter.
 
 ## Structure des fichiers
 
 ```
 .
-├── index.html    # structure de la page + sprite SVG
+├── index.html    # structure de la page + sprite d'icônes SVG
 ├── styles.css    # design system, mise en page, animations
 ├── script.js     # menu mobile, reveal au scroll, formulaire
+├── images/       # photographies (voir crédits ci-dessous)
 └── README.md
 ```
+
+## Images & crédits
+
+Les photographies proviennent d'[Unsplash](https://unsplash.com) et sont
+utilisées sous [licence Unsplash](https://unsplash.com/license) (usage gratuit,
+commercial et non commercial). Elles servent ici de **placeholders** : ce sont
+des chaussures et des athlètes génériques, et non des produits HokaLélé.
+
+> ⚠️ **À remplacer en production.** HokaLélé étant une marque fictive, aucune
+> photo ne porte son identité. Pour une mise en ligne réelle, substituez ces
+> visuels par vos propres photographies produit et campagne (mêmes noms de
+> fichiers dans `images/`, ou adaptez les `src` dans `index.html`).
+
+Fichiers : `hero-runner.jpg`, `lifestyle-run.jpg`, `product-mach.jpg`,
+`product-bondi.jpg`, `product-speedgoat.jpg`, `cat-running.jpg`,
+`cat-trail.jpg`, `cat-training.jpg`, `cat-lifestyle.jpg`.
 
 > Projet de démonstration. « HokaLélé » est une marque fictive : identité,
 > couleurs et slogans sont originaux et ne reproduisent pas ceux de marques
