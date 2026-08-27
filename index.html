@@ -60,9 +60,15 @@
 
 <main>
   <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero__photo" aria-hidden="true">
+  <section class="hero" data-mode="running">
+    <!-- Photo Running -->
+    <div class="hero__photo hero__photo--running" aria-hidden="true">
       <img src="images/hero.webp" alt="Chaussure de running HokaLélé bleu ciel portée par un athlète en pleine foulée" width="640" height="716" fetchpriority="high" />
+      <span class="hero__fade"></span>
+    </div>
+    <!-- Photo Surf -->
+    <div class="hero__photo hero__photo--surf" aria-hidden="true">
+      <img src="images/chicken-joe.webp" alt="Mascotte surfeuse HokaLélé" width="474" height="478" loading="lazy" />
       <span class="hero__fade"></span>
     </div>
 
@@ -73,18 +79,36 @@
     </svg>
 
     <div class="wrap hero__inner">
-      <div class="hero__copy">
-        <span class="eyebrow reveal">Faites plus. Allez plus loin.</span>
-        <h1 class="reveal">Repoussez vos limites.<br /><span class="accent">Changez votre foulée.</span></h1>
-        <p class="hero__sub reveal">Des chaussures pensées pour transformer chaque pas en élan.</p>
-        <div class="hero__cta reveal">
+      <!-- Onglets Running / Surf -->
+      <div class="hero__tabs" role="tablist" aria-label="Choisir un univers">
+        <button class="hero__tab is-active" role="tab" aria-selected="true" data-mode="running" type="button">Running</button>
+        <button class="hero__tab" role="tab" aria-selected="false" data-mode="surf" type="button">Surf</button>
+      </div>
+
+      <!-- Contenu Running -->
+      <div class="hero__copy hero__copy--running">
+        <span class="eyebrow">Faites plus. Allez plus loin.</span>
+        <h1>Repoussez vos limites.<br /><span class="accent">Changez votre foulée.</span></h1>
+        <p class="hero__sub">Des chaussures pensées pour transformer chaque pas en élan.</p>
+        <div class="hero__cta">
           <a href="#modeles" class="btn btn--solid btn--lg">Découvrir la collection <svg class="btn__ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+          <a href="#techno" class="link-arrow">Explorer la technologie <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Contenu Surf -->
+      <div class="hero__copy hero__copy--surf">
+        <span class="eyebrow">Gamme Surf</span>
+        <h1>Conçues pour la vague.<br /><span class="accent">Vécues pour la liberté.</span></h1>
+        <p class="hero__sub">Des chaussures légères, respirantes et adhérentes, pensées pour les surfeurs avant, pendant et après chaque session.</p>
+        <div class="hero__cta">
+          <a href="#modeles" class="btn btn--solid btn--lg">Découvrir la collection Surf <svg class="btn__ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
           <a href="#techno" class="link-arrow">Explorer la technologie <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a>
         </div>
       </div>
     </div>
 
-    <!-- encart chiffres -->
+    <!-- encart chiffres (Running) -->
     <div class="hero__badge" aria-hidden="true">
       <span class="hero__badge-tick"></span>
       <ul>

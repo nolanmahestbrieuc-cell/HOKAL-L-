@@ -19,6 +19,23 @@
     });
   }
 
+  /* ---- Onglets Running / Surf ---- */
+  var hero = document.querySelector(".hero");
+  var heroTabs = document.querySelectorAll(".hero__tab");
+  if (hero && heroTabs.length) {
+    heroTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var mode = tab.getAttribute("data-mode");
+        hero.setAttribute("data-mode", mode);
+        heroTabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+      });
+    });
+  }
+
   /* ---- Nav collée : ombre au scroll ---- */
   var nav = document.querySelector(".nav");
   var onScroll = function () {

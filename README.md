@@ -25,9 +25,12 @@ python3 -m http.server 8000   # puis http://localhost:8000
 1. **En-tête** — logo « HokaLélé » (Hoka marine / Lélé orange), navigation
    (Chaussures, Collection, Technologie, Notre histoire), bouton orange
    « Découvrir la collection » et icône panier.
-2. **Hero** — « Repoussez vos limites. / Changez votre foulée. », sous-titre,
-   double CTA, grande photographie sportive plein cadre, ligne de trajectoire
-   orange et encart « Plus de légèreté / d'amorti / d'énergie ».
+2. **Hero** — deux onglets **Running** et **Surf** :
+   - *Running* : « Repoussez vos limites. / Changez votre foulée. », double CTA,
+     grande photographie plein cadre, ligne de trajectoire orange et encart
+     « Plus de légèreté / d'amorti / d'énergie ».
+   - *Surf* : « Conçues pour la vague. / Vécues pour la liberté. », collection
+     Surf et visuel dédié.
 3. **Bande technologie** — Amorti maximal, Légèreté dynamique, Stabilité
    naturelle, avec pictogrammes fins et séparateurs.
 4. **Les modèles phares** — Mach 6, Bondi 9, Speedgoat 6 (photos produit).
@@ -63,8 +66,12 @@ python3 -m http.server 8000   # puis http://localhost:8000
 
 ## Images & crédits
 
-- **`hero.webp`** — visuel du hero fourni par le client : chaussure HokaLélé
-  bleu ciel portée en pleine foulée (image de marque, à conserver).
+- **`hero.webp`** — visuel du hero *Running* fourni par le client : chaussure
+  HokaLélé bleu ciel portée en pleine foulée (image de marque, à conserver).
+- **`chicken-joe.webp`** — visuel du hero *Surf* fourni par le client
+  (personnage « Chicken Joe » du film *Surf's Up*). Personnage tiers protégé,
+  utilisé pour un clin d'œil dans un contexte de démo/parodie — à remplacer par
+  un visuel libre de droits pour tout usage public ou commercial.
 - **Autres visuels** (`lifestyle-run.jpg`, `product-mach.jpg`,
   `product-bondi.jpg`, `product-speedgoat.jpg`, `cat-running.jpg`,
   `cat-trail.jpg`, `cat-training.jpg`, `cat-lifestyle.jpg`) — photographies
