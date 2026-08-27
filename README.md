@@ -63,19 +63,18 @@ python3 -m http.server 8000   # puis http://localhost:8000
 
 ## Images & crédits
 
-Les photographies proviennent d'[Unsplash](https://unsplash.com) et sont
-utilisées sous [licence Unsplash](https://unsplash.com/license) (usage gratuit,
-commercial et non commercial). Elles servent ici de **placeholders** : ce sont
-des chaussures et des athlètes génériques, et non des produits HokaLélé.
+- **`hero.webp`** — visuel du hero fourni par le client : chaussure HokaLélé
+  bleu ciel portée en pleine foulée (image de marque, à conserver).
+- **Autres visuels** (`lifestyle-run.jpg`, `product-mach.jpg`,
+  `product-bondi.jpg`, `product-speedgoat.jpg`, `cat-running.jpg`,
+  `cat-trail.jpg`, `cat-training.jpg`, `cat-lifestyle.jpg`) — photographies
+  [Unsplash](https://unsplash.com) sous [licence Unsplash](https://unsplash.com/license)
+  (usage gratuit, commercial et non commercial), servant de **placeholders** :
+  chaussures et athlètes génériques, à remplacer par vos propres visuels
+  HokaLélé en production.
 
-> ⚠️ **À remplacer en production.** HokaLélé étant une marque fictive, aucune
-> photo ne porte son identité. Pour une mise en ligne réelle, substituez ces
-> visuels par vos propres photographies produit et campagne (mêmes noms de
-> fichiers dans `images/`, ou adaptez les `src` dans `index.html`).
-
-Fichiers : `hero-runner.jpg`, `lifestyle-run.jpg`, `product-mach.jpg`,
-`product-bondi.jpg`, `product-speedgoat.jpg`, `cat-running.jpg`,
-`cat-trail.jpg`, `cat-training.jpg`, `cat-lifestyle.jpg`.
+> Pour substituer un visuel, conservez le même nom de fichier dans `images/`
+> ou adaptez le `src` correspondant dans `index.html`.
 
 > Projet de démonstration. « HokaLélé » est une marque fictive : identité,
 > couleurs et slogans sont originaux et ne reproduisent pas ceux de marques
