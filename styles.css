@@ -1,7 +1,7 @@
 /* =========================================================
    HokaLélé — Landing page
    Palette : blanc cassé + bleu ciel doux, accents orange vif
-   Type    : Space Grotesk (titres) + Inter (texte)
+   Type    : Archivo (titres) + Inter (texte)
    ========================================================= */
 
 :root{
@@ -41,7 +41,7 @@ body{
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;margin:0;line-height:1.04;letter-spacing:-.02em;font-weight:700}
+h1,h2,h3,h4{font-family:"Archivo",sans-serif;margin:0;line-height:1.05;letter-spacing:-.02em;font-weight:800}
 p{margin:0}
 .wrap{width:min(100% - 40px,var(--maxw));margin-inline:auto}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -52,7 +52,7 @@ p{margin:0}
   --pad:14px 24px;
   display:inline-flex;align-items:center;gap:9px;
   padding:var(--pad);
-  font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.98rem;
+  font-family:"Archivo",sans-serif;font-weight:600;font-size:.98rem;
   letter-spacing:-.01em;border-radius:999px;cursor:pointer;border:1.6px solid transparent;
   transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s,border-color .2s;
   white-space:nowrap;
@@ -70,13 +70,13 @@ p{margin:0}
 .btn--full{width:100%;justify-content:center}
 
 .eyebrow{
-  display:inline-block;font-family:"Space Grotesk",sans-serif;font-weight:600;
+  display:inline-block;font-family:"Archivo",sans-serif;font-weight:600;
   font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);
   margin-bottom:18px;
 }
 .eyebrow--dark{color:var(--ink-3)}
 
-.link-arrow{display:inline-flex;align-items:center;gap:8px;font-family:"Space Grotesk";font-weight:600;color:var(--ink)}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-family:"Archivo";font-weight:600;color:var(--ink)}
 .link-arrow svg{width:20px;height:20px;transition:transform .25s var(--ease)}
 .link-arrow:hover svg{transform:translateX(5px)}
 
@@ -90,7 +90,7 @@ p{margin:0}
 }
 .nav.is-stuck{border-color:var(--line-soft);box-shadow:var(--shadow-sm);background:rgba(250,248,244,.9)}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
-.logo{font-family:"Space Grotesk";font-weight:700;font-size:1.5rem;letter-spacing:-.03em;color:var(--ink)}
+.logo{font-family:"Archivo";font-weight:800;font-size:1.5rem;letter-spacing:-.03em;color:var(--ink)}
 .logo span{color:var(--orange)}
 .logo--light{color:#fff}
 .nav__links{display:flex;gap:34px}
@@ -105,7 +105,7 @@ p{margin:0}
 .nav__toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav__toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .nav__mobile{display:none;flex-direction:column;gap:6px;padding:10px 20px 22px}
-.nav__mobile a{padding:12px 6px;font-family:"Space Grotesk";font-weight:600;font-size:1.1rem;border-bottom:1px solid var(--line-soft)}
+.nav__mobile a{padding:12px 6px;font-family:"Archivo";font-weight:600;font-size:1.1rem;border-bottom:1px solid var(--line-soft)}
 .nav__mobile .btn{margin-top:12px;justify-content:center;border-bottom:0}
 
 /* ================= HERO ================= */
@@ -130,7 +130,7 @@ p{margin:0}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 .hero__stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
 .hero__stats div{display:flex;flex-direction:column}
-.hero__stats strong{font-family:"Space Grotesk";font-size:1.7rem;font-weight:700;letter-spacing:-.03em}
+.hero__stats strong{font-family:"Archivo";font-size:1.7rem;font-weight:800;letter-spacing:-.03em}
 .hero__stats strong em{font-style:normal;color:var(--ink-3);font-size:1rem}
 .hero__stats span{font-size:.82rem;color:var(--ink-3);letter-spacing:.01em}
 
@@ -154,7 +154,7 @@ p{margin:0}
 .marquee{position:relative;z-index:2;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
   overflow:hidden;padding:16px 0;background:rgba(255,255,255,.4)}
 .marquee__track{display:flex;align-items:center;gap:26px;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite}
-.marquee__track span{font-family:"Space Grotesk";font-weight:600;font-size:1.05rem;color:var(--ink-2);letter-spacing:-.01em}
+.marquee__track span{font-family:"Archivo";font-weight:600;font-size:1.05rem;color:var(--ink-2);letter-spacing:-.01em}
 .marquee__track i{color:var(--orange);font-style:normal}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -182,7 +182,7 @@ p{margin:0}
 .card__ic svg{width:34px;height:34px}
 .card h3{font-size:1.5rem;margin-bottom:12px}
 .card p{color:var(--ink-2)}
-.card__index{position:absolute;right:26px;top:26px;font-family:"Space Grotesk";font-weight:700;font-size:1rem;color:var(--sky-3)}
+.card__index{position:absolute;right:26px;top:26px;font-family:"Archivo";font-weight:700;font-size:1rem;color:var(--sky-3)}
 
 /* ---- products ---- */
 .models{background:var(--paper)}
@@ -195,14 +195,14 @@ p{margin:0}
 .product__media--c{background:radial-gradient(120% 110% at 30% 20%, #fff 0%, #ffe7dc 100%)}
 .product__shoe{width:88%;filter:drop-shadow(0 22px 22px rgba(20,40,70,.20));transition:transform .5s var(--ease)}
 .product:hover .product__shoe{transform:scale(1.06) rotate(-2deg)}
-.product__tag{position:absolute;left:18px;top:18px;font-family:"Space Grotesk";font-weight:600;font-size:.72rem;
+.product__tag{position:absolute;left:18px;top:18px;font-family:"Archivo";font-weight:600;font-size:.72rem;
   letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.85);color:var(--ink);
   padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
 .product__media--b .product__tag{background:rgba(255,90,32,.9);color:#fff}
 .product__body{padding:26px 26px 30px}
 .product__row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
 .product__row h3{font-size:1.4rem}
-.product__price{font-family:"Space Grotesk";font-weight:600;color:var(--orange);font-size:1.1rem}
+.product__price{font-family:"Archivo";font-weight:600;color:var(--orange);font-size:1.1rem}
 .product__body p{color:var(--ink-2);margin-bottom:22px}
 
 /* ---- editorial ---- */
@@ -265,7 +265,7 @@ p{margin:0}
   border:1px solid rgba(255,255,255,.14);color:#fff;transition:background .25s,transform .25s,border-color .25s}
 .footer__social a:hover{background:var(--orange);border-color:var(--orange);transform:translateY(-3px)}
 .footer__social svg{width:20px;height:20px}
-.footer__col h4{font-family:"Space Grotesk";font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+.footer__col h4{font-family:"Archivo";font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
   color:rgba(255,255,255,.5);margin-bottom:18px;font-weight:600}
 .footer__col a{display:block;padding:7px 0;color:rgba(255,255,255,.72);font-size:.95rem;transition:color .2s}
 .footer__col a:hover{color:#fff}

@@ -46,7 +46,7 @@ python3 -m http.server 8000
 - **Illustrations vectorielles (SVG)** dessinées à la main pour les chaussures,
   le coureur et les icônes : la page est 100 % autonome et se charge
   instantanément, sans image externe.
-- **Typographie** : [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- **Typographie** : [Archivo](https://fonts.google.com/specimen/Archivo)
   (titres et logo) et [Inter](https://fonts.google.com/specimen/Inter) (texte),
   chargées via Google Fonts.
 - **Responsive** (mobile, tablette, desktop) et respect de
